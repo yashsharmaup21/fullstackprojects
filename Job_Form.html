@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Form</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        padding: 20px;
+        }
+        form {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(10,10,10,10);
+        }
+        h1 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        }
+        h3 {
+        margin-top: 20px;
+        color: #0073e6;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+        }
+        label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        }
+        input, select {
+        width: 95%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        }
+        .radio-group label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: normal;
+        }
+        button {
+        display: inline-block;
+        width: 48%;
+        padding: 12px;
+        margin-top: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+        .submit-btn {
+        background: #0073e6;
+        color: white;
+        }
+        .submit-btn:hover {
+        background: #005bb5;
+        }
+        .reset-btn {
+        background: #f44336;
+        color: white;
+        }
+        .reset-btn:hover {
+        background: #c62828;
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Job Application With Resume Upload</h1>
+
+        <!-- Contact Information -->
+        <h3>Contact Information</h3>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="phone">Phone📞</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Postion Details -->
+        <h3>Position</h3>
+        <label for="position">Position You are Applying For</label>
+        <input type="text" id="position">
+        
+        <label>Job Type</label>
+        <div class="radio-group">
+            <label><input type="radio" name="job-type" value="Internship"> Internship</label>
+            <label><input type="radio" name="job-type" value="Full Time" required> Full Time</label>
+            <label><input type="radio" name="job-type" value="Part Time"> Part Time</label>
+        </div>
+    
+        <label for="resume">Resume Upload</label>
+        <input type="file" id="resume">
+
+        <label for="portfolio">Portfolio Website</label>
+        <input type="url" id="portfolio">
+
+        <!-- Salary -->
+        <h3>Salary Details</h3>
+        <label for="salary">Expected Salary</label>
+        <select id="salary" name="salary">
+            <option value="Above 10K">Above 100K</option>
+            <option value="Above 10K">Above 20K</option>
+            <option value="Above 10K">Above 50K</option>
+            <option value="Above 10K">Above 10K</option>
+        </select>
+
+        <!-- Work Experience -->
+        <h3>Work Experience</h3>
+        <label for="experience">Total Years of Experience</label>
+        <input type="number" id="experience" name="experience" min="0">
+        
+        <label for="last-company">Last Company Name</label>
+        <input type="text" id="last-company" name="last-company">
+
+        <label for="last-role">Your Last Job Title</label>
+        <input type="text" id="last-role" name="last-role">
+
+        <label for="position">Last Company Your Post</label>
+        <input type="text" id="position">
+        
+        <!-- Buttons -->
+        <button type="submit" class="submit-btn">Submit Application</button>
+        <button type="reset" class="reset-btn">Reset</button>
+    </form>
+</body>
+</html>
